@@ -1,5 +1,6 @@
 import React from 'react'
 import { Api } from '~/api/Api'
+import LogoutHeader from '~/components/LogoutHeader'
 
 const IndexPage =  () => {
   const [emailInput, setEmailInput] = React.useState("")
@@ -39,39 +40,6 @@ const IndexPage =  () => {
   return (
     <>
       <style jsx>{`
-        .header{
-          position: fixed;
-          width: 100%;
-          padding: 10px;
-          display: flex;
-          border-bottom: 1px solid #ddd;
-          box-shadow: rgb(149 157 165 / 20%) 0px 2px 15px;
-          justify-content: space-between;
-          box-sizing: border-box;
-          background-color: #fff;
-        }
-        .logo{
-          font-size: 40px;
-          font-weight: bold;
-          color: #2196f3;
-        }
-        .menu{
-          display: flex;
-          align-items: center;
-        }
-        .menu-option{
-          margin: 0 5px;
-          font-size: 15px;
-          font-weight: bold;
-          color: #4c4c4c;
-          cursor: pointer;
-        }
-
-        .menu-option:hover{
-          color: #2196f3;
-        }
-
-
         .content{
           padding-top: 68px;
         }
@@ -152,13 +120,7 @@ const IndexPage =  () => {
         }
       `}</style>
       <div className="page">
-        <div className="header">
-          <div className="logo">WP</div>
-          <div className="menu">
-            <div className="menu-option">Client Login</div>
-            <div className="menu-option">Provider Login</div>
-          </div>
-        </div>
+        <LogoutHeader/>
         <div className="content">
           <div className="hero-banner">
             <img className="hero-banner__image" src="https://emprendeconhuevos.com/wp-content/uploads/2019/06/car-wash.jpg"/>
